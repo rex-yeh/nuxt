@@ -10,9 +10,10 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: 'github-pages'
-    prerender: {
+     prerender: {
       crawlLinks: false,
-      failOnError: false
+      routes: [],
+      failOnError: false,
     }
   },
 
