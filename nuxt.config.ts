@@ -9,13 +9,19 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    preset: 'github-pages'
-     prerender: {
+    preset: 'github-pages',
+
+    prerender: {
       crawlLinks: false,
       routes: [],
       failOnError: false,
     }
   },
 
+  routeRules: {
+    '/**': { prerender: false }
+  },
+
   devtools: { enabled: true }
 });
+
