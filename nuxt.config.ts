@@ -5,23 +5,20 @@ export default defineNuxtConfig({
   ssr: false,
 
   app: {
-    baseURL: '/nuxt/'
+    baseURL: '/nuxt/',
   },
 
   nitro: {
     preset: 'github-pages',
 
     prerender: {
-      crawlLinks: false,
-      routes: [],
+      crawlLinks: true, 
+      routes: ['/'],       
       failOnError: false,
     }
   },
 
-  routeRules: {
-    '/**': { prerender: false }
-  },
+  routeRules: {},
 
   devtools: { enabled: true }
 });
-
